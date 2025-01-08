@@ -1,4 +1,4 @@
 #!/usr/bin/env bash
 # show attached ip
 
-ifconfig | grep inet | grep -v inet6 | tr -s " " | cut -d" " -f3
+ifconfig | awk '/inet / {print $2}'
