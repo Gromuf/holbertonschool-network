@@ -1,0 +1,10 @@
+#!/usr/bin/env bash
+# Port listening on localhost
+
+if ! command -v nc &> /dev/null; then
+    echo "Netcat (nc) is not installed. Please install it to use this script."
+    exit 1
+fi
+
+echo "Listening on port 98..."
+nc -l 127.0.0.1 98
